@@ -1,0 +1,469 @@
+/* Requisitions Page Styles */
+.requisitions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.requisitions-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1aff;
+    margin: 0;
+}
+
+.requisitions-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-filter {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.search-filter input {
+    min-width: 200px;
+    padding: 0.65rem 1rem;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f7fafd;
+}
+
+.search-filter input:focus {
+    border-color: #1a1aff;
+    outline: none;
+}
+
+.search-filter select {
+    padding: 0.65rem 1rem;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f7fafd;
+}
+
+/* Requisition Stats */
+.requisitions-stats {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.requisitions-stats .stat-card {
+    flex: 1;
+    min-width: 150px;
+    max-width: 25%;
+    flex-shrink: 0;
+    padding: 1rem;
+    background: #f7fafd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(60, 72, 180, 0.05);
+    border: 1px solid #e6eaff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.requisitions-stats .stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(60, 72, 180, 0.08);
+}
+
+.stat-card.warning .card-value {
+    color: #e6a700;
+}
+
+.stat-card.danger .card-value {
+    color: #d8000c;
+}
+
+.stat-card.success .card-value {
+    color: #1a8f1a;
+}
+
+.stat-card.info .card-value {
+    color: #4f8cff;
+}
+
+/* Requisitions List Container */
+.requisitions-list-container {
+    background: #f7fafd;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(60, 72, 180, 0.05);
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+/* Status badges */
+.status-badge {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    min-width: 80px;
+}
+
+.status-new {
+    background-color: #fff0e0;
+    color: #e6a700;
+}
+
+.status-in-progress {
+    background-color: #e6eaff;
+    color: #1a1aff;
+}
+
+.status-approved {
+    background-color: #e0f5ff;
+    color: #0091d6;
+}
+
+.status-rejected {
+    background-color: #ffe0e0;
+    color: #d8000c;
+}
+
+.status-completed {
+    background-color: #eaffea;
+    color: #1a8f1a;
+}
+
+/* Priority badges */
+.priority-badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    min-width: 60px;
+}
+
+.priority-low {
+    background-color: #eaffea;
+    color: #1a8f1a;
+}
+
+.priority-medium {
+    background-color: #fff0e0;
+    color: #e6a700;
+}
+
+.priority-high {
+    background-color: #ffe0e0;
+    color: #d8000c;
+}
+
+/* Table Actions */
+.data-table td:last-child {
+    white-space: nowrap;
+}
+
+.data-table .action-btn,
+.data-table .secondary-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    margin-right: 0.4rem;
+    min-width: 70px;
+    white-space: nowrap;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.page-info {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Requisition Details */
+.requisition-detail-header {
+    background: #f7fafd;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.requisition-basic-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+.requisition-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.requisition-id {
+    font-size: 1.8rem;
+    color: #1a1aff;
+    margin: 0;
+}
+
+.requisition-detail-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.requisition-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.detail-label {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.detail-value {
+    font-weight: 600;
+    color: #333;
+}
+
+.requisition-section {
+    margin-bottom: 1.5rem;
+}
+
+.requisition-section h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Requisition Items Table */
+.requisition-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+.requisition-items-table th,
+.requisition-items-table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.requisition-items-table th {
+    background: #e6eaff;
+    color: #1a1aff;
+    font-weight: 600;
+}
+
+.requisition-items-table tr:last-child td {
+    border-bottom: none;
+}
+
+.requisition-items-table tr:hover td {
+    background: rgba(26, 26, 255, 0.03);
+}
+
+/* Activity Timeline */
+.activity-timeline {
+    margin: 1.5rem 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.activity-timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e6eaff;
+}
+
+.timeline-item {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -26px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #1a1aff;
+    background: #fff;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-content {
+    background: #fff;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-description {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Process Requisition Form */
+.form-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+}
+
+.form-section h4 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.requisition-info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.info-label {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.info-value {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Radio options */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radio-option input[type="radio"] {
+    accent-color: #1a1aff;
+    width: 18px;
+    height: 18px;
+}
+
+.radio-option label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Button styles */
+.primary-btn,
+.secondary-btn,
+.danger-btn {
+    border-radius: 25px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Poppins', Arial, sans-serif;
+    min-width: 120px;
+}
+
+.danger-btn {
+    background: #d8000c;
+    color: #fff;
+    border: none;
+}
+
+.danger-btn:hover {
+    background: #b90000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .requisitions-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .requisitions-actions {
+        width: 100%;
+    }
+    
+    .search-filter {
+        width: 100%;
+    }
+    
+    .search-filter input,
+    .search-filter select {
+        width: 100%;
+    }
+    
+    .pagination {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
