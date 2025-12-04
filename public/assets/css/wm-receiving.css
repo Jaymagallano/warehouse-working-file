@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+body {
+    background: #f4f6fb;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.sidebar {
+    width: 220px;
+    background: #1a1aff;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-shadow: 2px 0 12px rgba(26,26,255,0.08);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 1rem 1rem;
+    border-bottom: 1px solid #2e2eff;
+}
+
+.sidebar-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    background: #fff;
+    object-fit: contain;
+}
+
+.sidebar-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0 0;
+    flex: 1 1 auto;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    transition: background 0.2s;
+    border-radius: 6px;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+    background: #4f8cff;
+}
+
+.logout-box {
+    margin: 1rem 1rem 1.2rem 1rem;
+    padding: 0.3rem 0;
+    background: #fff;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(26,26,255,0.10);
+}
+
+.logout-link {
+    color: #1a1aff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    display: block;
+    transition: background 0.2s, color 0.2s;
+    padding: 0.3rem 0;
+    border-radius: 6px;
+}
+
+.logout-link:hover {
+    background: #e0e7ff;
+    color: #0000e6;
+}
+
+.main-content {
+    flex: 1;
+    padding: 2.5rem 2rem;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    background: #fff;
+    box-shadow: 0 0 24px rgba(60, 72, 180, 0.08);
+    border-radius: 0 16px 16px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 220px;
+}
+
+.dashboard-section {
+    margin-bottom: 2rem;
+}
+
+.add-item-btn {
+    background: #1a1aff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 0.7rem;
+    transition: background 0.2s;
+}
+.add-item-btn:hover {
+    background: #0000e6;
+}
+
+.receiving-table-wrapper {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.receiving-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f7fafd;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.98rem;
+}
+
+.receiving-table th, .receiving-table td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.receiving-table th {
+    background: #e6eaff;
+    color: #1a1aff;
+    font-weight: 600;
+}
+
+.receiving-table tr:last-child td {
+    border-bottom: none;
+}
+
+.receiving-table td.status-received {
+    color: #1a8f1a;
+    font-weight: 600;
+}
+.receiving-table td.status-pending {
+    color: #e6a700;
+    font-weight: 600;
+}
+.receiving-table td.status-damaged {
+    color: #d8000c;
+    font-weight: 600;
+}
+
+.action-btn {
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.95rem;
+    margin-right: 0.3rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.action-btn:last-child {
+    margin-right: 0;
+}
+.action-btn:hover {
+    background: #1a1aff;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.25);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.2s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.modal-content {
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 14px;
+    box-shadow: 0 12px 40px rgba(26,26,255,0.18), 0 2px 8px rgba(60, 72, 180, 0.10);
+    min-width: 320px;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    animation: popIn 0.22s;
+}
+@keyframes popIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.modal-content h3 {
+    color: #1a1aff;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.modal-content label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.2rem;
+}
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    margin-bottom: 1rem;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f7fafd;
+    transition: border 0.2s;
+    font-family: 'Poppins', Arial, sans-serif;
+    box-sizing: border-box;
+}
+.modal-content input:focus,
+.modal-content select:focus {
+    border-color: #1a1aff;
+    outline: none;
+    background: #fff;
+}
+.modal-content button[type="submit"] {
+    width: 100%;
+    padding: 0.8rem 0;
+    background: linear-gradient(90deg, #1a1aff 60%, #4f8cff 100%);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background 0.2s;
+}
+.modal-content button[type="submit"]:hover {
+    background: linear-gradient(90deg, #0000e6 60%, #1a73e8 100%);
+}
+.modal-content .success-message {
+    color: #1a8f1a;
+    background: #eaffea;
+    border: 1px solid #1a8f1a;
+    border-radius: 4px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.98rem;
+    display: none;
+    text-align: center;
+}
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.7rem;
+    color: #888;
+    cursor: pointer;
+    background: #f7fafd;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+    border: none;
+    outline: none;
+}
+.close:hover {
+    background: #e0e7ff;
+    color: #1a1aff;
+    box-shadow: 0 2px 8px rgba(26,26,255,0.08);
+}
+
+.delete-modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}

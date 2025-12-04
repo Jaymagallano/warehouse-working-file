@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+body {
+    background: #f4f6fb;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.sidebar {
+    width: 220px;
+    background: #1a1aff;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-shadow: 2px 0 12px rgba(26,26,255,0.08);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 1rem 1rem;
+    border-bottom: 1px solid #2e2eff;
+}
+
+.sidebar-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    background: #fff;
+    object-fit: contain;
+}
+
+.sidebar-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0 0;
+    flex: 1 1 auto;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    transition: background 0.2s;
+    border-radius: 6px;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+    background: #4f8cff;
+}
+
+.logout-box {
+    margin: 1rem 1rem 1.2rem 1rem;
+    padding: 0.3rem 0;
+    background: #fff;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(26,26,255,0.10);
+}
+
+.logout-link {
+    color: #1a1aff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    display: block;
+    transition: background 0.2s, color 0.2s;
+    padding: 0.3rem 0;
+    border-radius: 6px;
+}
+
+.logout-link:hover {
+    background: #e0e7ff;
+    color: #0000e6;
+}
+
+.main-content {
+    flex: 1;
+    padding: 2.5rem 2rem;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    background: #fff;
+    box-shadow: 0 0 24px rgba(60, 72, 180, 0.08);
+    border-radius: 0 16px 16px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 220px;
+}
+
+.dashboard-section {
+    margin-bottom: 2rem;
+}
+
+.report-filter-form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.report-filter-form label {
+    font-weight: 500;
+    color: #333;
+}
+
+.report-filter-form select,
+.report-filter-form input[type="date"] {
+    padding: 0.5rem 0.8rem;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f7fafd;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.report-filter-form button {
+    background: #1a1aff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.report-filter-form button:hover {
+    background: #0000e6;
+}
+
+.reports-table-wrapper {
+    overflow-x: auto;
+}
+
+.reports-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f7fafd;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.98rem;
+}
+
+.reports-table th, .reports-table td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.reports-table th {
+    background: #e6eaff;
+    color: #1a1aff;
+    font-weight: 600;
+}
+
+.reports-table tr:last-child td {
+    border-bottom: none;
+}
+
+.reports-table td {
+    color: #333;
+}

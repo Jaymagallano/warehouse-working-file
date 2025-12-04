@@ -1,0 +1,386 @@
+/* Delivery Tracking Page Styles */
+.delivery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.delivery-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1aff;
+    margin: 0;
+}
+
+.delivery-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-filter {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.search-filter input {
+    min-width: 200px;
+    padding: 0.65rem 1rem;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f7fafd;
+}
+
+.search-filter input:focus {
+    border-color: #1a1aff;
+    outline: none;
+}
+
+.search-filter select {
+    padding: 0.65rem 1rem;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f7fafd;
+}
+
+/* Delivery Stats */
+.delivery-stats {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.delivery-stats .stat-card {
+    flex: 1;
+    min-width: 150px;
+    max-width: 25%;
+    flex-shrink: 0;
+    padding: 1rem;
+    background: #f7fafd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(60, 72, 180, 0.05);
+    border: 1px solid #e6eaff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.delivery-stats .stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(60, 72, 180, 0.08);
+}
+
+.stat-card.warning .card-value {
+    color: #e6a700;
+}
+
+.stat-card.danger .card-value {
+    color: #d8000c;
+}
+
+.stat-card.success .card-value {
+    color: #1a8f1a;
+}
+
+.stat-card.info .card-value {
+    color: #4f8cff;
+}
+
+/* Delivery Map */
+.delivery-map-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(60, 72, 180, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.delivery-map-container h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+#delivery-map {
+    width: 100%;
+    height: 320px;
+    background: #f7fafd;
+    border-radius: 8px;
+    border: 1px solid #e6eaff;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #666;
+}
+
+.map-placeholder p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+/* Table Container */
+.table-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(60, 72, 180, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+}
+
+.table-container h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+/* Status badges */
+.status-badge {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    min-width: 100px;
+}
+
+.status-ordered {
+    background-color: #e6eaff;
+    color: #1a1aff;
+}
+
+.status-shipped {
+    background-color: #e0f5ff;
+    color: #0091d6;
+}
+
+.status-in-transit {
+    background-color: #e6eaff;
+    color: #1a1aff;
+}
+
+.status-out-for-delivery {
+    background-color: #fff0e0;
+    color: #e6a700;
+}
+
+.status-delivered {
+    background-color: #eaffea;
+    color: #1a8f1a;
+}
+
+.status-delayed {
+    background-color: #ffe0e0;
+    color: #d8000c;
+}
+
+/* Table Actions */
+.data-table td:last-child {
+    white-space: nowrap;
+}
+
+.data-table .action-btn,
+.data-table .secondary-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    margin-right: 0.4rem;
+    min-width: 70px;
+    white-space: nowrap;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.page-info {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Delivery Details */
+.delivery-detail-header {
+    background: #f7fafd;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.delivery-id {
+    font-size: 1.8rem;
+    color: #1a1aff;
+    margin: 0 0 1rem 0;
+}
+
+.delivery-info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.delivery-info-item {
+    margin-bottom: 0.8rem;
+}
+
+.info-label {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+}
+
+.info-value {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Tracking Timeline */
+.tracking-timeline {
+    margin: 2rem 0;
+    padding: 0;
+    position: relative;
+}
+
+.tracking-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 12px;
+    width: 2px;
+    background: #e6eaff;
+}
+
+.tracking-event {
+    padding-left: 40px;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.tracking-event::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #1a1aff;
+}
+
+.tracking-event.active::before {
+    background: #1a1aff;
+}
+
+.tracking-date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+}
+
+.tracking-location {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.tracking-description {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Items List */
+.delivery-items-section {
+    margin-top: 2rem;
+}
+
+.delivery-items-section h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.items-table th,
+.items-table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.items-table th {
+    background-color: #f7fafd;
+    color: #1a1aff;
+    font-weight: 600;
+}
+
+.items-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .delivery-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .delivery-actions {
+        width: 100%;
+    }
+    
+    .search-filter {
+        width: 100%;
+    }
+    
+    .search-filter input,
+    .search-filter select {
+        width: 100%;
+    }
+    
+    .delivery-info-container {
+        grid-template-columns: 1fr;
+    }
+    
+    #delivery-map {
+        height: 250px;
+    }
+    
+    .pagination {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
